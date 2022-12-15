@@ -1,13 +1,13 @@
 {
-    "manifest_version": 1,
+    "manifest_version": 3,
     "name": "Highlight Summary",
     "version": "1.0",
     "description": "Summarize highlighted text with GTP3",
     "icons": {
-        "16": "images/magic16.png",
-        "32": "images/magic32.png",
-        "48": "images/magic48.png",
-        "128": "images/magic128.png"
+        "16": "images/magic16.ico",
+        "32": "images/magic32.ico",
+        "48": "images/magic48.ico",
+        "128": "images/magic128.ico"
     },
     "content_scripts": [
         {
