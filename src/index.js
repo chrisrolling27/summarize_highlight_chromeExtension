@@ -15,7 +15,7 @@ if (window.getSelection) {
 
   console.log(text);
 
-
+//
 
 
   // Support for API reference docs and dates
