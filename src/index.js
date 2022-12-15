@@ -7,8 +7,6 @@ if (window.getSelection) {
 
   const text = window.getSelection().toString();
 
-
-
   // const badge = document.createElement("p");
   // // Use the same styling as the publish information in an article's header
   // badge.classList.add("color-secondary-text", "type--caption");
@@ -29,3 +27,5 @@ if (window.getSelection) {
 }
 
 
+//server that takes text, sends it to node server
+//node server sends to GTP and returns

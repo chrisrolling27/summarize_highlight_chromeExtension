@@ -3,22 +3,33 @@
     "name": "Highlight Summary",
     "version": "1.0",
     "description": "Summarize highlighted text with GTP3",
+
     "icons": {
-        "16": "images/magic16.ico",
-        "32": "images/magic32.ico",
-        "48": "images/magic48.ico",
-        "128": "images/magic128.ico"
+        "16": "images/cyan16.png",
+        "32": "images/cyan32.png",
+        "48": "images/cyan48.png",
+        "128": "images/cyan128.png"
     },
+    "host_permissions": [
+    	"https://some-random-api.ml/*"
+  	],
+    
+    "action": {
+      "default_popup": "./dist/index.html"
+    },
+
     "content_scripts": [
-        {
-            "js": [
-                "scripts/content.js"
-            ],
-            "matches": [
-                "https://developer.chrome.com/docs/extensions/*",
-                "https://developer.chrome.com/docs/webstore/*",
-                "https://*/*"
-            ]
-        }
-    ]
+      {
+          "js": [
+              "./src/index.js"
+          ],
+          "matches": [
+              "https://developer.chrome.com/docs/extensions/*",
+              "https://developer.chrome.com/docs/webstore/*",
+              "https://*/*"
+          ]
+      }
+  ]
+//
+
 }
