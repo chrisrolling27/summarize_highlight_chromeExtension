@@ -1,5 +1,5 @@
 
-console.log('highlight-summary initiated');
+console.log('scripts index run');
 
 if (window.getSelection) {
 
@@ -15,7 +15,7 @@ if (window.getSelection) {
 
   console.log(text);
 
-//
+
 
 
   // Support for API reference docs and dates

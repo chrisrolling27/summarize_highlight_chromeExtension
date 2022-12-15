@@ -10,26 +10,20 @@
         "48": "images/cyan48.png",
         "128": "images/cyan128.png"
     },
+
+    "permissions": [
+      "tabGroups"
+    ],
+      
     "host_permissions": [
-    	"https://some-random-api.ml/*"
+    	"https://developer.chrome.com/*"
   	],
     
     "action": {
       "default_popup": "./dist/index.html"
-    },
+    }
 
-    "content_scripts": [
-      {
-          "js": [
-              "./src/index.js"
-          ],
-          "matches": [
-              "https://developer.chrome.com/docs/extensions/*",
-              "https://developer.chrome.com/docs/webstore/*",
-              "https://*/*"
-          ]
-      }
-  ]
+    
 
 
 }
