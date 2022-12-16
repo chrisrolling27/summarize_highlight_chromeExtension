@@ -4,17 +4,36 @@ console.log('main.js run');
 // const api = "https://covid19.mathdro.id/api/countries";
 
 
-if (window.getSelection) {
-  console.log('window got selected');
-  const text = window.getSelection().toString();
-  console.log(text);
-}
+// if (window.getSelection) {
+//   console.log('window has selection!');
+//   const text = window.getSelection().toString();
+//   console.log(text);
+// }
 
 const button = document.querySelector("button");
+const loading = document.querySelector("loading");
+
 
 button.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log('clicked!')
+  console.log('clicked!');
+
+  var words = "hello from chris";
+
+  var x = document.createElement("div");
+  var t = document.createTextNode(words);
+  x.setAttribute("style", "color: black;");
+  x.appendChild(t);
+  document.body.appendChild(x);
+
+
+  // if (window.getSelection) {
+  //   console.log('window has selection!');
+  //   const text = window.getSelection().toString();
+  //   console.log(text);
+  // }
+
+
 });
 
 
