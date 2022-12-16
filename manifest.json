@@ -12,11 +12,12 @@
     },
 
     "permissions": [
-      "tabGroups"
+      ["scripting", "activeTab"]
     ],
       
     "host_permissions": [
-    	"https://developer.chrome.com/*"
+    	"http://*/*",
+      "https://*/*"
   	],
     
     "action": {

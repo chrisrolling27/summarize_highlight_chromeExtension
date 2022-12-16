@@ -2,10 +2,20 @@ console.log('main.js run');
 //import axios from "axios";
 // const api = "https://covid19.mathdro.id/api/countries";
 
-var words = 'hohohoho';
+
+//const text = window.getSelection.toString();
+
+let first = window.getSelection();
+const selectedText = first.toString();
+console.log(selectedText);
+
+
+//var words = 'Nope';
+
+//const winner = (text ? text : words);
 
 var container = document.createElement("div");
-var content = document.createTextNode(words);
+var content = document.createTextNode(selectedText);
     
 document.body.appendChild(container);
 container.appendChild(content);
@@ -24,6 +34,9 @@ container.setAttribute("style", "color: blue;");
 
 
 
+//todo:
+//GPT call
+//window get selection highlight to work
 
 
 
