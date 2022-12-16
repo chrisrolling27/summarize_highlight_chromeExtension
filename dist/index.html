@@ -2,24 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./cr.css" />
   </head>
-  <body>
-    <template id="li_template">
-      <li>
-        <a>
-          <h3 class="title">Tab Title</h3>
-          <p class="pathname">Tab Pathname</p>
-        </a>
-      </li>
-    </template>
+  <body class="container">
+    <form class="form-data" autocomplete="on">
+      <div class="enter-country">
+        Enter a country name to get more information:
+      </div>
+      <div>
+        <input type="text" class="country-name" />
+      </div>
+      <button class="search-btn">BEEP</button>
+    </form>
+    <div class="result">
+      <div class="loading">loading...</div>
+      <div class="errors"></div>
+      <div class="data"></div>
+      <div class="result-container">
+        <p><strong>Total cases: </strong><span class="cases"></span></p>
+        <p>
+          <strong>Total recovered: </strong> <span class="recovered"></span>
+        </p>
+        <p><strong>Total deaths: </strong><span class="deaths"></span></p>
+      </div>
+    </div>
 
-    <h1>Google Dev Docs</h1>
-    <button>Group Tabs</button>
-    <ul></ul>
-
-    <script src="./index.js" type="module"></script>
+    <script src="./main.js" type="module"></script>
   </body>
 </html>
