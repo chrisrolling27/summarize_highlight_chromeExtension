@@ -10,7 +10,7 @@ const selectedText = first.toString();
 console.log(selectedText);
 
 
-//var words = 'Nope';
+var words = 'Nope';
 
 //const winner = (text ? text : words);
 
@@ -19,7 +19,8 @@ var content = document.createTextNode(selectedText);
     
 document.body.appendChild(container);
 container.appendChild(content);
-container.setAttribute("style", "color: blue;");
+
+container.setAttribute("style", "background-color: red", "color: blue;");
     
     
   // if (window.getSelection) {
