@@ -18,8 +18,7 @@
   "permissions": [
     "storage",
     "activeTab",
-    "scripting",
-    "tabs"
+    "https://api.openai.com/*"
   ],
   "action": {
     "default_popup": "popup.html"
