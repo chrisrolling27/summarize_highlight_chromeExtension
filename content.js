@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer YOUR_API_KEY_HERE"
+          "Authorization": ""
         },
         body: JSON.stringify({
           prompt: "Summarize this text: " + request.text,

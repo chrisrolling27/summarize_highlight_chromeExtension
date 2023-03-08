@@ -17,8 +17,7 @@
   },
   "permissions": [
     "storage",
-    "activeTab",
-    "https://api.openai.com/*"
+    "activeTab"
   ],
   "action": {
     "default_popup": "popup.html"
