@@ -3,15 +3,13 @@
   "name": "Highlight Summary",
   "version": "1.0",
   "description": "Summarize highlighted text with GTP3",
-
   "options_page": "options.html",
-"icons": {
+  "icons": {
     "16": "images/cyan16.png",
     "32": "images/cyan32.png",
     "48": "images/cyan48.png",
     "128": "images/cyan128.png"
-},
-
+  },
   "background": {
     "service_worker": "background.js"
   },
@@ -19,9 +17,7 @@
     "storage",
     "activeTab"
   ],
-  "action": {
-   
-  },
+  "action": {},
   "host_permissions": [
     "http://*/*",
     "https://*/*"
