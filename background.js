@@ -1,10 +1,26 @@
 console.log('background.js run')
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.local.set({
-      name: "Emma"
-  });
+// chrome.runtime.onInstalled.addListener(() => {
+//   chrome.storage.local.set({
+//       name: "Emma"
+//   });
+// });
+
+
+function doSomething() {
+  let text = window.getSelection().toString();
+  console.log(text);
+  alert('Hello from background script!');
+}
+
+
+chrome.action.onClicked.addListener((tab) => {
+    chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      function: doSomething
+    });
 });
+
 
 //To get our foreground script to actually embed into the users tab(s) we need to first monitor 
 //their browsing experience with the tabs API. We do this monitoring in the backround script:
@@ -21,25 +37,27 @@ chrome.runtime.onInstalled.addListener(() => {
 //   }
 // });
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.message === 'get_name') {
-      chrome.storage.local.get('name', data => {
-          if (chrome.runtime.lastError) {
-              sendResponse({
-                  message: 'fail'
-              });
 
-              return;
-          }
 
-          sendResponse({
-              message: 'success',
-              payload: data.name
-          });
-      });
+// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+//   if (request.message === 'get_name') {
+//       chrome.storage.local.get('name', data => {
+//           if (chrome.runtime.lastError) {
+//               sendResponse({
+//                   message: 'fail'
+//               });
 
-      return true;
-  }})
+//               return;
+//           }
+
+//           sendResponse({
+//               message: 'success',
+//               payload: data.name
+//           });
+//       });
+
+//       return true;
+//   }})
 
 
 
