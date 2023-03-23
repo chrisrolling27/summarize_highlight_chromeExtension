@@ -15,9 +15,13 @@
   },
   "permissions": [
     "storage",
-    "activeTab"
+    "activeTab",
+    "scripting",
+    "tabs"
   ],
-  "action": {},
+  "action": {
+    "default_popup": "./popup.html"
+  },
   "host_permissions": [
     "http://*/*",
     "https://*/*"
