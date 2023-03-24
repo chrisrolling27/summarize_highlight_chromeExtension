@@ -7,17 +7,21 @@ console.log('background.js run')
 // });
 
 
-function doSomething() {
+function alertHighlight() {
   let text = window.getSelection().toString();
   console.log(text);
-  alert('Hello from background script!');
+
+  if (text != '') {
+    alert(text)
+  }
+
 }
 
 
 chrome.action.onClicked.addListener((tab) => {
     chrome.scripting.executeScript({
       target: { tabId: tab.id },
-      function: doSomething
+      function: alertHighlight
     });
 });
 
