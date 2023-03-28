@@ -29,10 +29,7 @@
     "scripting",
     "tabs"
   ],
-  "web_accessible_resources": ["config.js"],
-  "action": {
-    
-  },
+  "action": {},
   "host_permissions": [
     "http://*/*",
     "https://*/*"
