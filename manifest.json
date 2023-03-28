@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Highlight Summary",
   "version": "1.0",
-  "description": "Summarize highlighted text with GPT3",
+  "description": "Summarize highlighted text with GPT",
   "options_page": "options.html",
   "icons": {
     "16": "images/cyan16.png",
@@ -29,6 +29,7 @@
     "scripting",
     "tabs"
   ],
+  "web_accessible_resources": ["config.js"],
   "action": {
     
   },
