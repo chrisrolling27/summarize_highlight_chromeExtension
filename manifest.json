@@ -18,9 +18,5 @@
     "scripting",
     "tabs"
   ],
-  "action": {},
-  "host_permissions": [
-    "http://*/*",
-    "https://*/*"
-  ]
+  "action": {}
 }
