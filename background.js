@@ -9,14 +9,14 @@ async function alertHighlight() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer sk-XX`,
+          'Authorization': `Bearer sk-`,
         },
         body: JSON.stringify({
-          prompt: `Please summarize the following text: ${text}`,
-          max_tokens: 50,
+          prompt: `Please summarize the following text taken from a website: ${text}`,
+          max_tokens: 100,
           n: 1,
           stop: null,
-          temperature: 0.7,
+          temperature: 0.2,
         }),
       });
 
@@ -25,7 +25,13 @@ async function alertHighlight() {
       if (data.choices && data.choices.length > 0) {
         console.log(data);
         const summary = data.choices[0].text.trim();
+
         console.log(summary);
+
+        if (!summary.endsWith('.')) {
+          summary += '.';
+        }
+
         alert(summary);
       } else {
         console.error("Unexpected API response format:", data);
