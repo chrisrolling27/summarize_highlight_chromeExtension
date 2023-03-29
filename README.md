@@ -1,5 +1,4 @@
-Chrome Extension for Text Summarization
-This Chrome extension allows you to summarize any highlighted text on a webpage with a single click using the OpenAI API.
+This Chrome extension allows you to summarize any highlighted text on a webpage with a single click using your own OpenAI API.
 
 Prerequisites
 Before installing the extension, you must obtain your own OpenAI API key:
