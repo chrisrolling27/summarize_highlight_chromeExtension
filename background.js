@@ -37,7 +37,7 @@ async function summarizeAlert() {
       alert(error);
     }
   } else {
-    alert('you need to highlight text');
+    alert('you need to highlight text in the page');
   }
 }
 
