@@ -4,10 +4,10 @@
   "version": "1.0",
   "description": "Summarize highlighted text with GPT",
   "icons": {
-    "16": "images/cyan16.png",
-    "32": "images/cyan32.png",
-    "48": "images/cyan48.png",
-    "128": "images/cyan128.png"
+    "16": "images/magic16.png",
+    "32": "images/magic32.png",
+    "48": "images/magic48.png",
+    "128": "images/magic128.png"
   },
   "background": {
     "service_worker": "background.js"
