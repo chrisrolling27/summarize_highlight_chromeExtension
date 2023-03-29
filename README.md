@@ -3,9 +3,7 @@ This Chrome extension allows you to summarize any highlighted text on a webpage 
 Prerequisites
 Before installing the extension, you must obtain your own OpenAI API key:
 
-Sign up for OpenAI: Visit OpenAI's website and sign up for an account if you don't already have one.
-
-Get your API key: Once you have an account, go to the API Keys page to obtain your API key.
+Sign up for OpenAI: Visit OpenAI's website, sign up, and get your API key: https://platform.openai.com/account/api-keys
 
 Update the extension code: Open the background.js file in the extension folder, locate the Authorization header, and replace YOUR_API_KEY with your actual OpenAI API key in the headers.authorization:
 
