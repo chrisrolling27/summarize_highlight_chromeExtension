@@ -1,16 +1,5 @@
 console.log('background.js run');
 
-chrome.action.onClicked.addListener((tab) => {
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: alertHighlight
-  }, () => {
-    if (chrome.runtime.lastError) {
-      console.error(chrome.runtime.lastError);
-    }
-  });
-});
-
 async function alertHighlight() {
   let text = window.getSelection().toString();
   console.log(text);
@@ -20,7 +9,7 @@ async function alertHighlight() {
       const summary = await fetchGPTSummary(text);
       alert(summary);
     } catch(error) {
-      console.error('error fetching summary', error);
+      alert(error);
     }
     } 
     if (text == '') {
@@ -34,7 +23,7 @@ async function alertHighlight() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer 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`,
+        'Authorization': `Bearer sk-`,
       },
       body: JSON.stringify({
         prompt: `Please summarize the following text: ${text}`,
@@ -50,3 +39,8 @@ async function alertHighlight() {
   }
 
 
+  chrome.action.onClicked.addListener((tab) => {
+    chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      function: alertHighlight
+    })})
