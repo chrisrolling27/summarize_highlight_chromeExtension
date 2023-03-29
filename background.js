@@ -1,8 +1,8 @@
 console.log('background.js run');
-async function alertHighlight() {
+
+async function summarizeAlert() {
   let text = window.getSelection().toString();
   console.log(text);
-
   if (text != '') {
     try {
       const response = await fetch('https://api.openai.com/v1/engines/text-davinci-002/completions', {
@@ -19,25 +19,20 @@ async function alertHighlight() {
           temperature: 0.2,
         }),
       });
-
       const data = await response.json();
 
       if (data.choices && data.choices.length > 0) {
         console.log(data);
         const summary = data.choices[0].text.trim();
-
         console.log(summary);
-
         if (!summary.endsWith('.')) {
           summary += '.';
         }
-
         alert(summary);
       } else {
         console.error("Unexpected API response format:", data);
         alert("Failed to fetch summary. Please try again.");
       }
-
     } catch (error) {
       alert(error);
     }
@@ -49,6 +44,6 @@ async function alertHighlight() {
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    function: alertHighlight
+    function: summarizeAlert
   });
 });
