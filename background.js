@@ -16,32 +16,37 @@ async function alertHighlight() {
   console.log(text);
 
   if (text != '') {
-    const summary = await fetchGPTSummary(text);
-    alert(summary);
-  } else {
-    alert('ya need highlight');
+    try {
+      const summary = await fetchGPTSummary(text);
+      alert(summary);
+    } catch(error) {
+      console.error('error fetching summary', error);
+    }
+    } 
+    if (text == '') {
+      alert('ya need highlight');
+    }
   }
-}
 
 
-async function fetchGPTSummary(text) {
-  const response = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer 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`,
-    },
-    body: JSON.stringify({
-      prompt: `Please summarize the following text: ${text}`,
-      max_tokens: 50,
-      n: 1,
-      stop: null,
-      temperature: 0.7,
-    }),
-  });
+  async function fetchGPTSummary(text) {
+    const response = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer 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`,
+      },
+      body: JSON.stringify({
+        prompt: `Please summarize the following text: ${text}`,
+        max_tokens: 50,
+        n: 1,
+        stop: null,
+        temperature: 0.7,
+      }),
+    });
 
-  const data = await response.json();
-  return data.choices[0].text.trim();
-}
+    const data = await response.json();
+    return data.choices[0].text.trim();
+  }
 
 
