@@ -9,7 +9,7 @@ async function summarizeAlert() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer YOUR_API_KEY_HERE`,
+          'Authorization': `Bearer YOUR_API_KEY`,
         },
         body: JSON.stringify({
           prompt: `Please summarize the following text taken from a website: ${text}`,
