@@ -9,7 +9,7 @@ async function summarizeAlert() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer sk-`,
+          'Authorization': `Bearer YOUR_API_KEY_HERE`,
         },
         body: JSON.stringify({
           prompt: `Please summarize the following text taken from a website: ${text}`,
@@ -23,7 +23,7 @@ async function summarizeAlert() {
 
       if (data.choices && data.choices.length > 0) {
         console.log(data);
-        const summary = data.choices[0].text.trim();
+        let summary = data.choices[0].text.trim();
         console.log(summary);
         if (!summary.endsWith('.')) {
           summary += '.';
