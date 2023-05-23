@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Highlight Summary",
+  "name": "Spotify Highlight",
   "version": "1.0",
-  "description": "Summarize highlighted text with GPT",
+  "description": "Highlight songs and bands so you can easily search and add to Spotify.",
   "icons": {
     "16": "images/magic16.png",
     "32": "images/magic32.png",
