@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Spotify Highlight",
+  "name": "Summarize Highlight",
   "version": "1.0",
   "description": "Summarize highlighted text with GPT",
   "icons": {
